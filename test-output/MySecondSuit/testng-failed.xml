@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MySecondSuit]">
+  <listeners>
+    <listener class-name="listenerClass.customListeners"/>
+  </listeners>
+  <test thread-count="5" name="Select(failed)">
+    <classes>
+      <class name="Config.SelectBrowser">
+        <methods>
+          <include name="selectBrowser"/>
+        </methods>
+      </class> <!-- Config.SelectBrowser -->
+    </classes>
+  </test> <!-- Select(failed) -->
+  <test thread-count="5" name="Save(failed)">
+    <classes>
+      <class name="Config.Save">
+        <methods>
+          <include name="testfailure"/>
+        </methods>
+      </class> <!-- Config.Save -->
+    </classes>
+  </test> <!-- Save(failed) -->
+</suite> <!-- Failed suite [MySecondSuit] -->

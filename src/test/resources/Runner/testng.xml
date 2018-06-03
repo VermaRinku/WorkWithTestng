@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="MyFirstSuit">
+
+
+<groups>
+ <run>
+      <include name = "regression"></include>
+      <exclude name = "functional"></exclude>
+  </run>
+ </groups>
+
+<listeners>
+<listener  class-name="listenerClass.customListeners"> </listener>   
+</listeners>
+
+
+
+  <test  name="HomeBasic">
+    <classes>
+      <class name="Pages.HomePage"/>
+    </classes>
+  </test> <!-- Test -->
+  
+ 
+ <test  name="Assert">
+    <classes>
+      <class name="Pages.Page2"/>
+    </classes>
+  </test> 
+  
+  <test  name="TestDependancy">
+  
+  
+   <groups>
+ <run>
+      <include name = "bvt"></include>
+      <exclude name = "functional"></exclude>
+  </run>
+ </groups>
+  
+  
+    <classes>
+      <class name="Pages.Page3"/>
+    </classes>
+  </test>
+   
+  
+</suite> <!-- Suite -->

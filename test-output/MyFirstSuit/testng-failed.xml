@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [MyFirstSuit]">
+  <listeners>
+    <listener class-name="listenerClass.customListeners"/>
+  </listeners>
+  <test thread-count="5" name="Assert(failed)">
+    <classes>
+      <class name="Pages.Page2">
+        <methods>
+          <include name="validateTitleTest"/>
+          <include name="testSkipCondition"/>
+          <include name="zest"/>
+        </methods>
+      </class> <!-- Pages.Page2 -->
+    </classes>
+  </test> <!-- Assert(failed) -->
+</suite> <!-- Failed suite [MyFirstSuit] -->
